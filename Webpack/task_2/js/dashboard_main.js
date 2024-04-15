@@ -1,22 +1,18 @@
+import $ from "jquery";
+import _ from "lodash";
+import "../css/main.css";
 
-import $ from 'jquery';
-import _ from 'lodash';
+$("body").append('<div id="logo"></div>');
+$("body").append("<p>Holberton Dashboard</p>");
+$("body").append("<p>Dashboard data for the students</p>");
+$("body").append("<button>Click here to get started</button>");
+$("body").append('<p id="count"></p>');
+$("body").append("<p>Copyright - Holberton School</p>");
 
-const content = [
-    '<p>Holberton Dashboard</p>',
-    '<p>Dashboard data for the students</p>',
-    "<button>Click here to get started</button>",
-    "<p id='count'></p>",
-    "<p>Copyright - Holberton School</p>"
-]
-
-content.forEach(i => $("body").append(i))
+$("button").on("click", _.debounce(updateCounter, 500));
 
 let count = 0;
-
 function updateCounter() {
-    count += 1;
-    document.getElementById("count").innerHTML = `${count} clicks on the button`;
+  count += 1;
+  $("#count").text(`${count} clicks on the button`);
 }
-
-$("button").on('click', _.debounce(updateCounter, 500))
