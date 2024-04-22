@@ -6,16 +6,17 @@ import { getLatestNotification } from "./utils";
 const Notifications = () => {
   return (
     <div className="Notifications">
-      <button style={{
+      <button
+        style={{
           background: "transparent",
           border: "none",
           position: "absolute",
           right: 20,
         }}
         aria-label="close"
-        >
-          <img src={closeIcon} alt="close-icon" />
-          </button>
+      >
+        <img src={closeIcon} alt="close-icon" />
+      </button>
       <p>Here is the list of notifications</p>
       <ul>
         <li data-priority="default">New course available</li>
@@ -26,8 +27,7 @@ const Notifications = () => {
         ></li>
       </ul>
     </div>
-    
-  );
+  )
 };
 
 export default Notifications;
