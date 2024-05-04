@@ -6,8 +6,9 @@
   margin-top: 40px;
   border: 1px solid var(--border-table-color);
   border-collapse: collapse;
-  width: 95%;
+  width: 100%;
 }
+
 
 #CourseList th {
   border-top: 1px solid var(--border-table-color);

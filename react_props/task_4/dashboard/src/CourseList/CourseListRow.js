@@ -5,7 +5,6 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
   let element;
 
   if (isHeader === true) {
-    //
     if (textSecondCell === null) {
       element = <th colSpan="2">{textFirstCell}</th>;
     } else {
