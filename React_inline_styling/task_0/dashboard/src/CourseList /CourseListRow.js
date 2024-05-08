@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-const rowStyle = {backgroundColor: '#f5f5f5ab'};
-const headerRowStyle = {backgroundColor: '#deb5b545'};
+const rowStyles = { backgroundColor: "#f5f5f5ab" };
+const headerRowStyles = { backgroundColor: "#deb5b545" };
 
 function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
   let element;
@@ -29,7 +29,10 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
     );
   }
 
-  let isHeaderStyle = isHeader ? headerRowStyle : rowStyle;
+  let isHeaderStyle;
+
+  if (isHeader) isHeaderStyle = headerRowStyles;
+  else isHeaderStyle = rowStyles;
 
   return <tr style={isHeaderStyle}>{element}</tr>;
 }
